@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SidenavItemInfo} from "./interfaces/sidenavItemInfo";
 
 @Component({
   selector: 'app-root',

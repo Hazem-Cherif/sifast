@@ -1,0 +1,31 @@
+<hr>
+<div class="container">
+  <h1>Add Question Form</h1>
+  <form #f="ngForm">
+
+    <div class="form-group">
+      <label>Type:</label>
+      <input type="text" name="Type" class="form-control" [(ngModel)]="question.type" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+    </div>
+
+    <div class="form-group">
+      <label>Category:</label>
+      <input type="text" name="cqtegory" class="form-control" [(ngModel)]="question.category" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+    </div>
+
+    <div class="form-group">
+      <label>Content:</label>
+      <input type="text" name="Content" class="form-control" [(ngModel)]="question.content" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+    </div>
+
+    <div class="form-group">
+      <label>Response:</label>
+      <input type="text" name="Response" class="form-control" [(ngModel)]="question.response" [ngModelOptions]="{standalone: true}" #g="ngModel" required>
+    </div>
+
+
+    <button class="btn btn-success" [disabled]="f.invalid  " (click)="save()" >
+      save
+    </button>
+  </form>
+</div>

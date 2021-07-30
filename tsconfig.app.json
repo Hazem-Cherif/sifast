@@ -7,7 +7,9 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "src/app/enums/type.enum.ts",
+    "src/app/enums/category.enum.ts"
   ],
   "include": [
     "src/**/*.d.ts"
