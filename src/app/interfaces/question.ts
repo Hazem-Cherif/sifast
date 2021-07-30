@@ -4,5 +4,6 @@ export interface Question{
   response?: string,
   type?: TypeEnum,
   category?: CategoryEnum,
+  status?: string ,
 }
 

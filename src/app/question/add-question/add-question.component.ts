@@ -10,6 +10,8 @@ import {QuestionService} from "../../services/question.service";
 export class AddQuestionComponent implements OnInit {
 
   question : Question = {}
+  Type: any = ['PRIVATE', 'PUBLIC']
+  Category: any = ['JAVA', 'ANGULAR']
 
   constructor(private questionService: QuestionService) { }
 
@@ -18,6 +20,7 @@ export class AddQuestionComponent implements OnInit {
   }
 
   save() {
+    this.question.status = "APPROVED"
     this.questionService.addQuestion(this.question).subscribe(() => this.question);
     console.log(this.question)
     alert('You successfully added the new Formation' );

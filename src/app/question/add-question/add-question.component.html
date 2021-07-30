@@ -5,12 +5,18 @@
 
     <div class="form-group">
       <label>Type:</label>
-      <input type="text" name="Type" class="form-control" [(ngModel)]="question.type" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+      <select type="text" name="Type" class="form-control" [(ngModel)]="question.type" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+        <option value="" disabled>Choose your Type</option>
+        <option *ngFor="let type of Type" [ngValue]="type">{{type}}</option>
+      </select>
     </div>
 
     <div class="form-group">
       <label>Category:</label>
-      <input type="text" name="cqtegory" class="form-control" [(ngModel)]="question.category" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+      <select type="text" name="Type" class="form-control" [(ngModel)]="question.category" [ngModelOptions]="{standalone: true}" #c="ngModel" required>
+        <option value="" disabled>Choose your Category</option>
+        <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
+      </select>
     </div>
 
     <div class="form-group">
